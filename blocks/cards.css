@@ -1,6 +1,7 @@
 .cards {
   padding-top: 20px;
   border: 1px;
+  border-bottom: 1px solid #21212166;
 }
 
 .cards__list {

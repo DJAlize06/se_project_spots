@@ -10,6 +10,8 @@
   height: 190px;
   width: 190px;
   margin-right: 20px;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .profile__column {
@@ -31,6 +33,7 @@
   max-width: 420px;
 }
 .profile__description {
+  color: #212121b2;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -45,16 +48,29 @@
 }
 
 .profile__edit-button {
+  cursor: pointer;
   margin-top: auto;
   font-family: Poppins, Arial, Helvetica, sans-serif;
+  color: #212121;
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
+  border: none;
+  display: flex;
+  gap: 8px;
+  padding: 0;
+  background-color: transparent;
+}
+
+.profile__edit-button:hover {
+  cursor: pointer;
 }
 
 .profile__plus-button {
+  cursor: pointer;
   margin-left: auto;
   background-color: #212121;
+  border: none;
   width: 149px;
   height: 52px;
   border-radius: 8px;
@@ -62,6 +78,14 @@
   margin: 0;
   align-self: end;
   margin-left: auto;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile__plus-button:hover {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
