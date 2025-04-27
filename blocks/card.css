@@ -26,11 +26,12 @@
   white-space: nowrap;
   overflow: hidden;
   max-width: 354px;
+  margin: 0;
 }
 
 .card__like-button {
   cursor: pointer;
-  background-image: url(../images/Like\ Icon.svg);
+  background-image: url(../images/Union.svg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -43,7 +44,7 @@
 }
 
 .card__like-button:hover {
-  color: #212121;
+  opacity: 1;
 }
 
 @media screen and (max-width: 627px) {

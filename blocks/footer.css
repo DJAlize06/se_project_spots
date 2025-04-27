@@ -1,6 +1,5 @@
-.footer {
-  margin-bottom: 60px;
-  margin-left: 668px;
+.footer__copyright {
+  padding: 60px 0;
   line-height: 1;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 400;
