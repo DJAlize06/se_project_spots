@@ -109,6 +109,11 @@
 
   .profile__plus-button {
     margin: 0;
+    width: 100%;
+  }
+
+  .profile__edit-button {
+    align-self: center;
   }
 
   .profile__name {
