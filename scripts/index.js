@@ -38,6 +38,14 @@ newPostCloseButton.addEventListener("click", function () {
   newPostModal.classList.remove("modal_is-opened");
 });
 
+function openModal(modal) {
+  modal.classList.add("modal_is-opened");
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
+}
+
 function handleEditProfileFormSubmit(event) {
   event.preventDefault();
   profileNameElement.textContent = editProfileNameInput.value;
@@ -46,3 +54,29 @@ function handleEditProfileFormSubmit(event) {
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileFormSubmit);
+
+const addCardFormElement = document.querySelector(".add-card-form");
+const editProfileNameInput = document.querySelector("#profile-name-input");
+const linkInput = document.querySelector("#link-input");
+
+function handleAddCardFormSubmit(event) {
+  event.preventDefault();
+  const cardTitle = addCardFormElement.querySelector("#card-title-input").value;
+  const cardDescription = addCardFormElement.querySelector(
+    "#card-description-input"
+  ).value;
+
+  if (cardTitle && cardDescription) {
+    const newCard = document.createElement("div");
+    newCard.classList.add("card");
+    newCard.innerHTML = `
+      <h3 class="card__title">${cardTitle}</h3>
+      <p class="card__description">${cardDescription}</p>
+      <a href="${linkInput.value}" class="card__link">View More</a>
+    `;
+    document.querySelector(".cards-container").appendChild(newCard);
+    addCardFormElement.reset();
+  }
+}
+
+addCardFormElement.addEventListener("submit", handleAddCardFormSubmit);

@@ -10,12 +10,11 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
-  transition: visibility 0.3s, opacity 0.3s ease-in;
+  transition: visibility 0.3s, opacity 0s ease-in;
 }
 
 .modal_is-opened {
   visibility: visible;
-  transition: visibility 0.3s, opacity 0.3s ease-in;
 }
 
 .modal__container {
@@ -42,7 +41,7 @@
 .modal__title {
   margin: 0 0 32px;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 32px;
   line-height: 100%;
   letter-spacing: 0%;
 }
@@ -75,14 +74,7 @@
 .modal__submit-button {
   color: #fff;
   background-color: black;
-  max-width: none;
-  flow: horizontal;
-  width: fill (276px);
-  height: hug (52px);
-  radius: 8px;
-  padding-top: 18px;
-  padding-right: 32px;
-  padding-bottom: 18px;
-  padding-left: 8px;
-  gap: 8px;
+  width: 156px;
+  height: 52px;
+  border-radius: 8px;
 }
