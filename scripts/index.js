@@ -58,7 +58,7 @@ editProfileForm.addEventListener("submit", handleEditProfileFormSubmit);
 const addCardFormElement = newPostModal.querySelector(".modal__form");
 const nameInput = addCardFormElement.querySelector("#card-title-input");
 const linkInput = document.querySelector("#link-input");
-
+addCardFormElement.querySelector("#card-image-input").value = linkInput.value;
 function handleAddCardFormSubmit(event) {
   event.preventDefault();
   const cardTitle = addCardFormElement.querySelector("#card-title-input").value;
