@@ -56,27 +56,15 @@ function handleEditProfileFormSubmit(event) {
 editProfileForm.addEventListener("submit", handleEditProfileFormSubmit);
 
 const addCardFormElement = newPostModal.querySelector(".modal__form");
-const nameInput = addCardFormElement.querySelector("#card-title-input");
-const linkInput = document.querySelector("#link-input");
-addCardFormElement.querySelector("#card-image-input").value = linkInput.value;
+const nameInput = addCardFormElement.querySelector("#post-caption-input");
+const linkInput = addCardFormElement.querySelector("#card-image-input");
+
 function handleAddCardFormSubmit(event) {
   event.preventDefault();
-  const cardTitle = addCardFormElement.querySelector("#card-title-input").value;
-  const cardDescription = addCardFormElement.querySelector(
-    "#card-description-input"
-  ).value;
 
-  if (cardTitle && cardDescription) {
-    const newCard = document.createElement("div");
-    newCard.classList.add("card");
-    newCard.innerHTML = `
-      <h3 class="card__title">${cardTitle}</h3>
-      <p class="card__description">${cardDescription}</p>
-      <a href="${linkInput.value}" class="card__link">View More</a>
-    `;
-    document.querySelector(".cards-container").appendChild(newCard);
-    addCardFormElement.reset();
-  }
+  console.log(nameInput.value);
+  console.log(linkInput.value);
+  closeModal(newPostModal);
 }
 
 addCardFormElement.addEventListener("submit", handleAddCardFormSubmit);
